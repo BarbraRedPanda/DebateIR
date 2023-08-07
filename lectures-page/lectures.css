@@ -1,0 +1,92 @@
+@font-face {
+    font-family: Akira;
+    src: url(../Akira.otf);
+}
+
+
+
+body    {
+    font-family: Akira;
+    cursor: none;
+}
+
+a   {
+    color: #000000;
+    text-decoration: none;
+    font-size: 32px;
+    cursor: none;
+}
+
+
+/*
+timeline ui idea taken from
+https://codepen.io/tutsplus/pen/QNeJgR
+
+*/
+.timeline ul {
+    transform: translate(-50%);
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 4px;
+  margin: 0 auto;
+  padding-top: 100vw; 
+  background: #000000;
+}
+
+.timeline ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: inherit;
+  z-index: 1;
+}
+
+.timeline ul li div {
+  position: absolute;
+  bottom: 50vw;
+  width: 400px;
+  padding: 15px;
+  background: #000000;
+  left: 45px;
+  border-radius: 5px;
+  height: 500px;
+  transform: translate(0, 50%);
+}
+
+.timeline ul li div::before {
+
+
+}
+
+/*
+custom cursor from juxtopposed's codepen https://codepen.io/Juxtopposed/pen/NWExxja
+*/
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: rgb(97, 39, 39);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.3s ease;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.custom-cursor.scale-up {
+  transform: scale(2.5);
+  transition: transform 0.5s ease;
+}

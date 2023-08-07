@@ -1,0 +1,172 @@
+:root{
+    --hi: 
+}
+
+@font-face { 
+    font-family: Akira; src: url('../Akira.otf'); 
+    --mint: #d7fff1;
+    --light-green: #AAFCB8;
+    --darkish-green: #8cd790;
+    --cambridge: #77af9c;
+    --castleton: #285943;
+} 
+
+/*
+Next few code snippets gotten from hyperplexed's parallax menu
+*/
+body {
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    cursor: none;
+    background-color: black;
+}
+#title  {
+    font-size: clamp(4rem, 8vw, 8rem);
+    font-size: 8vw;
+    font-family: 'Ibarra Real Nova', serif;
+    font-family: Akira;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: black;
+    transition: height .1s ease;
+}
+
+#name   {
+    margin-right: auto;
+    color: white;
+    margin-left: clamp(4rem, 6vw, 48rem);
+}
+
+#nav[data-active-index="0"] > #menu-bg-img   {
+    background-position: center 25%;
+}
+
+#nav[data-active-index="1"] > #menu-bg-img   {
+    background-position: center 50%;
+}
+
+#nav[data-active-index="2"] > #menu-bg-img   {
+    background-position: center 75%;
+}
+
+
+#menu-bg-img    {
+    background-image: url("/images/based.jpg");
+    background-position: center 40%;
+    background-size: 111vmax;
+    height: 100%;
+    left: 0px;
+    opacity: .15;
+    position: absolute;
+    top: 0px;
+    transition: opacity 800ms ease,
+    background-size 800ms ease,
+    background-position 800ms ease;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#menu-items:hover ~ #menu-bg-img    {
+    transition: 1000ms;
+    opacity: .2;
+    z-index: 0;
+    background-size: 95%;
+}
+
+
+
+#menu-items {
+    margin-left: clamp(4rem, 6vw, 48rem);
+    position: relative;
+    z-index: 2;
+}
+
+#nav    {
+    align-items: center;
+    color: black;
+    background-color: white;
+    height: 100vh;
+    transition: height .1s ease;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex; 
+}
+
+a{
+    cursor: none;
+}
+
+
+
+
+.menu-item  {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: block;
+    font-family: 'Ibarra Real Nova', serif;
+    font-family: Akira;
+    font-size: clamp(3rem, 8vw, 8rem);
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    text-decoration: none;
+    transition: opacity 500ms ease;
+}
+
+#menu-items:hover > .menu-item {
+    opacity: 0.5;
+}
+
+#menu-items:hover > .menu-item:hover{
+    opacity: 1;
+}
+
+/*
+scroll earth stuff
+*/
+#scroller   {
+    height: 20vw;
+    width: 20vw;
+    margin-right: 3vw;
+}
+
+#scroll-img {
+    height: 20vw;
+    
+    transition: all 0.2s ease-in-out;
+}
+
+
+/*
+custom cursor from juxtopposed's codepen https://codepen.io/Juxtopposed/pen/NWExxja
+*/
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: rgb(97, 39, 39);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.3s ease;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.custom-cursor.scale-up {
+  transform: scale(2.5);
+  transition: transform 0.5s ease;
+}
+
