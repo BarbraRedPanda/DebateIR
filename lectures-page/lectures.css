@@ -8,13 +8,17 @@
 body    {
     font-family: Akira;
     cursor: none;
+    background: white;
 }
 
 a   {
-    color: #000000;
-    text-decoration: none;
-    font-size: 32px;
-    cursor: none;
+}
+
+#home-title {
+  color: #000000;
+  text-decoration: none;
+  font-size: 32px;
+  cursor: none;
 }
 
 
@@ -49,7 +53,7 @@ https://codepen.io/tutsplus/pen/QNeJgR
   z-index: 1;
 }
 
-.timeline ul li div {
+.timeline ul li .tl-div {
   position: absolute;
   bottom: 50vw;
   width: 400px;
@@ -59,12 +63,74 @@ https://codepen.io/tutsplus/pen/QNeJgR
   border-radius: 5px;
   height: 500px;
   transform: translate(0, 50%);
+  margin-right: 100px;
 }
 
-.timeline ul li div::before {
+.speaker-name {
+  color: white;
+  position: relative;
+  top: -50px;
+  font-size: 50px;
+}
 
+
+
+.lore {
+  color: rgb(200, 200, 200);
+  position: relative;
+  top: -95px;
+  height: 30px;
+}
+
+
+.lore-creds {
+  position: relative;
+  float: left;
+  margin-right: 5px;
+}
+
+.lore-link > img{
+  position: relative;
+  height: 30px;
+  float: left;
+  margin-right: 5px;
+  transform: translateY(50%);
+}
+
+.lore-signup  {
+  position: relative;
+  color: rgb(200, 200, 200);
+  text-decoration: none;
+  
+}
+
+.lore-item  {
+  position: relative;
+  float:left;
+  top: -50%;
+}
+
+#sjoberg-img  {
+  position: relative;
+  width: 400px;
+  transform: translateY(-31.5%);
+}
+
+.speaker-img  {
 
 }
+
+.speaker-img:hover  {
+  opacity: .75;
+  transition: opacity .5s ease-in-out;
+}
+
+.speaker-img:hover + .speaker-name  {
+  opacity: .75;
+  transition: opacity .5s ease-in-out;
+  color: blueviolet;
+}
+
 
 /*
 custom cursor from juxtopposed's codepen https://codepen.io/Juxtopposed/pen/NWExxja

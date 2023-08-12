@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     cursor.style.top = e.clientY + 'px';
   });
 
-  var linkElements = document.querySelectorAll('.link, .cards-cta, a');
+  var linkElements = document.querySelectorAll('.link, .cards-cta, a, .enlarge');
   linkElements.forEach(function(element) {
     element.addEventListener('mouseenter', function() {
       cursor.classList.add('scale-up');
