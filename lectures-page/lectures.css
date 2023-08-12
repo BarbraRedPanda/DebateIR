@@ -3,19 +3,32 @@
     src: url(../Akira.otf);
 }
 
+:root {
+  /* v1 */
+  --text-color: #d7d2ce;
+  --lore-color: rgb(200, 200, 200);
+  --block-color: #1b1b19;
+
+  /* v2 */
+  /*
+  --text-color: white;
+  --lore-color: rgb(200,200,200);
+  --block-color: #1b1b19;
+  */
+}
 
 
 body    {
     font-family: Akira;
     cursor: none;
-    background: white;
+    background: #2f2f2d;
 }
 
 a   {
 }
 
 #home-title {
-  color: #000000;
+  color: var(--text-color);
   text-decoration: none;
   font-size: 32px;
   cursor: none;
@@ -37,7 +50,7 @@ https://codepen.io/tutsplus/pen/QNeJgR
   width: 4px;
   margin: 0 auto;
   padding-bottom: 50px; 
-  background: #000000;
+  background: var(--block-color);
   height: 500px;
 }
 
@@ -60,7 +73,7 @@ https://codepen.io/tutsplus/pen/QNeJgR
   bottom: 30vh;
   width: 400px;
   padding: 15px;
-  background: #000000;
+  background: var(--block-color);
   left: 45px;
   border-radius: 5px;
   height: 500px;
@@ -69,7 +82,7 @@ https://codepen.io/tutsplus/pen/QNeJgR
 }
 
 .speaker-name {
-  color: white;
+  color: var(--text-color);
   position: relative;
   top: -50px;
   font-size: 50px;
@@ -97,12 +110,14 @@ https://codepen.io/tutsplus/pen/QNeJgR
   float: left;
   margin-right: 5px;
   transform: translateY(50%);
+  cursor:none;
 }
 
 .lore-signup  {
   position: relative;
   color: rgb(200, 200, 200);
   text-decoration: none;
+  cursor:none;
   
 }
 
@@ -116,6 +131,7 @@ https://codepen.io/tutsplus/pen/QNeJgR
   position: relative;
   width: 400px;
   transform: translateY(-31.5%);
+  cursor:none;
 }
 
 .speaker-img  {
@@ -124,7 +140,7 @@ https://codepen.io/tutsplus/pen/QNeJgR
 
 .speaker-img:hover  {
   opacity: .75;
-  transition: opacity .5s ease-in-out;
+  transition: opacity 500ms ease;
 }
 
 .speaker-img:hover + .speaker-name  {
