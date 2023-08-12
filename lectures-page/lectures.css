@@ -38,6 +38,7 @@ https://codepen.io/tutsplus/pen/QNeJgR
   margin: 0 auto;
   padding-bottom: 50px; 
   background: #000000;
+  height: 500px;
 }
 
 .timeline ul li::after {
@@ -55,8 +56,8 @@ https://codepen.io/tutsplus/pen/QNeJgR
 
 .timeline ul li .tl-div {
   position: relative;
-  top: 0;
-  bottom: 50vh;
+  top: -38.5vh;
+  bottom: 30vh;
   width: 400px;
   padding: 15px;
   background: #000000;
