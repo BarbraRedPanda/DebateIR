@@ -36,7 +36,7 @@ https://codepen.io/tutsplus/pen/QNeJgR
   position: relative;
   width: 4px;
   margin: 0 auto;
-  padding-top: 100vw; 
+  padding-bottom: 50px; 
   background: #000000;
 }
 
@@ -54,8 +54,9 @@ https://codepen.io/tutsplus/pen/QNeJgR
 }
 
 .timeline ul li .tl-div {
-  position: absolute;
-  bottom: 50vw;
+  position: relative;
+  top: 0;
+  bottom: 50vh;
   width: 400px;
   padding: 15px;
   background: #000000;
