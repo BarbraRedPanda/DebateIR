@@ -5,7 +5,13 @@
 
 //custom curstor stuff
 document.addEventListener('DOMContentLoaded', function() {
-  
+
+  document.getElementById('color-shifter').addEventListener('click', () =>  {
+    document.documentElement.style.setProperty('--text-color', white);
+
+  });
+
+  //custom cursor stuff 
   var cursor = document.createElement('div');
   cursor.classList.add('custom-cursor');
   document.body.appendChild(cursor);
